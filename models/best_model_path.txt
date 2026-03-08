@@ -1,0 +1,1 @@
+models/lightning_logs\lightning_logs\version_38\checkpoints\epoch=40-step=164.ckpt
