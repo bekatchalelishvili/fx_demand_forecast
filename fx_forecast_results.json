@@ -1,0 +1,371 @@
+{
+  "meta": {
+    "model": "Temporal Fusion Transformer",
+    "target": "fx_demand_usd_m",
+    "prediction_horizon": 3,
+    "encoder_length": 36,
+    "optuna_trials": 200
+  },
+  "performance": {
+    "baseline_mae": 11.5,
+    "initial_mae": 9.6453,
+    "tuned_mae": 9.9352,
+    "beats_baseline": true,
+    "improved_vs_initial": false,
+    "mae_vs_baseline_pct": 13.61
+  },
+  "tuned_hyperparameters": {
+    "learning_rate": 0.015025,
+    "hidden_size": 17,
+    "attention_head_size": 3,
+    "dropout": 0.215394,
+    "hidden_continuous_size": 10,
+    "gradient_clip_val": 0.09738
+  },
+  "forecast": [
+    {
+      "month": "2026-01",
+      "P2": 120.84,
+      "P10": 145.3,
+      "P25": 145.18,
+      "P50": 151.12,
+      "P75": 149.06,
+      "P90": 146.1,
+      "P98": 147.41
+    },
+    {
+      "month": "2026-02",
+      "P2": 110.23,
+      "P10": 137.91,
+      "P25": 146.12,
+      "P50": 149.8,
+      "P75": 150.98,
+      "P90": 157.96,
+      "P98": 168.59
+    },
+    {
+      "month": "2026-03",
+      "P2": 111.59,
+      "P10": 140.74,
+      "P25": 148.27,
+      "P50": 148.81,
+      "P75": 154.83,
+      "P90": 156.95,
+      "P98": 166.71
+    }
+  ],
+  "variable_importance": [
+    {
+      "variable": "major_election_month",
+      "importance": 0.194524,
+      "type": "decoder (known)",
+      "suggest_drop": false
+    },
+    {
+      "variable": "avg_fx_demand_by_month",
+      "importance": 0.177681,
+      "type": "decoder (known)",
+      "suggest_drop": false
+    },
+    {
+      "variable": "month",
+      "importance": 0.149672,
+      "type": "decoder (known)",
+      "suggest_drop": false
+    },
+    {
+      "variable": "election_month",
+      "importance": 0.118428,
+      "type": "decoder (known)",
+      "suggest_drop": false
+    },
+    {
+      "variable": "time_idx",
+      "importance": 0.112184,
+      "type": "decoder (known)",
+      "suggest_drop": false
+    },
+    {
+      "variable": "reserves_import_coverage_months",
+      "importance": 0.084926,
+      "type": "encoder (unknown)",
+      "suggest_drop": false
+    },
+    {
+      "variable": "is_year_start",
+      "importance": 0.066846,
+      "type": "decoder (known)",
+      "suggest_drop": false
+    },
+    {
+      "variable": "public_debt_pct_gdp",
+      "importance": 0.057584,
+      "type": "encoder (unknown)",
+      "suggest_drop": false
+    },
+    {
+      "variable": "avg_fx_demand_by_quarter",
+      "importance": 0.057284,
+      "type": "decoder (known)",
+      "suggest_drop": false
+    },
+    {
+      "variable": "fdi_usd_m",
+      "importance": 0.052912,
+      "type": "encoder (unknown)",
+      "suggest_drop": false
+    },
+    {
+      "variable": "fx_volatility_3m",
+      "importance": 0.052154,
+      "type": "encoder (unknown)",
+      "suggest_drop": false
+    },
+    {
+      "variable": "brent_crude_usd",
+      "importance": 0.041794,
+      "type": "encoder (unknown)",
+      "suggest_drop": false
+    },
+    {
+      "variable": "current_account_pct_gdp",
+      "importance": 0.040122,
+      "type": "encoder (unknown)",
+      "suggest_drop": false
+    },
+    {
+      "variable": "is_quarter_end",
+      "importance": 0.038662,
+      "type": "decoder (known)",
+      "suggest_drop": false
+    },
+    {
+      "variable": "gdp_growth_yoy_pct",
+      "importance": 0.035756,
+      "type": "encoder (unknown)",
+      "suggest_drop": false
+    },
+    {
+      "variable": "rate_differential_geo_us",
+      "importance": 0.031406,
+      "type": "encoder (unknown)",
+      "suggest_drop": false
+    },
+    {
+      "variable": "fx_demand_lag12m",
+      "importance": 0.027892,
+      "type": "encoder (unknown)",
+      "suggest_drop": false
+    },
+    {
+      "variable": "fx_demand_6m_ma",
+      "importance": 0.026187,
+      "type": "encoder (unknown)",
+      "suggest_drop": false
+    },
+    {
+      "variable": "cpi_us_yoy_pct",
+      "importance": 0.021819,
+      "type": "encoder (unknown)",
+      "suggest_drop": false
+    },
+    {
+      "variable": "tourism_index",
+      "importance": 0.021561,
+      "type": "encoder (unknown)",
+      "suggest_drop": false
+    },
+    {
+      "variable": "vix_index",
+      "importance": 0.021223,
+      "type": "encoder (unknown)",
+      "suggest_drop": false
+    },
+    {
+      "variable": "fx_demand_usd_m",
+      "importance": 0.01986,
+      "type": "encoder (unknown)",
+      "suggest_drop": false
+    },
+    {
+      "variable": "eur_gel_rate",
+      "importance": 0.019269,
+      "type": "encoder (unknown)",
+      "suggest_drop": false
+    },
+    {
+      "variable": "trade_balance_usd_m",
+      "importance": 0.019249,
+      "type": "encoder (unknown)",
+      "suggest_drop": false
+    },
+    {
+      "variable": "tourism_receipts_usd_m",
+      "importance": 0.018558,
+      "type": "encoder (unknown)",
+      "suggest_drop": false
+    },
+    {
+      "variable": "russian_capital_inflow_proxy_usd_m",
+      "importance": 0.018082,
+      "type": "encoder (unknown)",
+      "suggest_drop": false
+    },
+    {
+      "variable": "geopolitical_shock_index",
+      "importance": 0.016767,
+      "type": "encoder (unknown)",
+      "suggest_drop": false
+    },
+    {
+      "variable": "unemployment_rate_pct",
+      "importance": 0.016762,
+      "type": "encoder (unknown)",
+      "suggest_drop": false
+    },
+    {
+      "variable": "nbg_intervention",
+      "importance": 0.016343,
+      "type": "encoder (unknown)",
+      "suggest_drop": false
+    },
+    {
+      "variable": "usd_gel_mom_chg_pct",
+      "importance": 0.016073,
+      "type": "encoder (unknown)",
+      "suggest_drop": false
+    },
+    {
+      "variable": "remittances_usd_m",
+      "importance": 0.015921,
+      "type": "encoder (unknown)",
+      "suggest_drop": false
+    },
+    {
+      "variable": "usd_gel_rate",
+      "importance": 0.014317,
+      "type": "encoder (unknown)",
+      "suggest_drop": false
+    },
+    {
+      "variable": "speculation_index",
+      "importance": 0.014092,
+      "type": "encoder (unknown)",
+      "suggest_drop": false
+    },
+    {
+      "variable": "nbg_intervention_size_usd_m",
+      "importance": 0.013689,
+      "type": "encoder (unknown)",
+      "suggest_drop": false
+    },
+    {
+      "variable": "covid_period",
+      "importance": 0.013604,
+      "type": "encoder (unknown)",
+      "suggest_drop": false
+    },
+    {
+      "variable": "fiscal_deficit_pct_gdp",
+      "importance": 0.012252,
+      "type": "encoder (unknown)",
+      "suggest_drop": false
+    },
+    {
+      "variable": "nbg_reserves_usd_bn",
+      "importance": 0.011081,
+      "type": "encoder (unknown)",
+      "suggest_drop": false
+    },
+    {
+      "variable": "dxy_index",
+      "importance": 0.00764,
+      "type": "encoder (unknown)",
+      "suggest_drop": false
+    },
+    {
+      "variable": "nbg_policy_rate_pct",
+      "importance": 0.007383,
+      "type": "encoder (unknown)",
+      "suggest_drop": false
+    },
+    {
+      "variable": "intervention_direction",
+      "importance": 0.007325,
+      "type": "encoder (unknown)",
+      "suggest_drop": false
+    },
+    {
+      "variable": "group_id",
+      "importance": 0.007239,
+      "type": "encoder (unknown)",
+      "suggest_drop": false
+    },
+    {
+      "variable": "exports_usd_m",
+      "importance": 0.006804,
+      "type": "encoder (unknown)",
+      "suggest_drop": false
+    },
+    {
+      "variable": "fed_funds_rate_pct",
+      "importance": 0.006672,
+      "type": "encoder (unknown)",
+      "suggest_drop": false
+    },
+    {
+      "variable": "is_year_end",
+      "importance": 0.006312,
+      "type": "decoder (known)",
+      "suggest_drop": false
+    },
+    {
+      "variable": "em_capital_flow_index",
+      "importance": 0.006158,
+      "type": "encoder (unknown)",
+      "suggest_drop": false
+    },
+    {
+      "variable": "cpi_georgia_yoy_pct",
+      "importance": 0.005214,
+      "type": "encoder (unknown)",
+      "suggest_drop": false
+    },
+    {
+      "variable": "fx_demand_lag3m",
+      "importance": 0.00504,
+      "type": "encoder (unknown)",
+      "suggest_drop": false
+    },
+    {
+      "variable": "imports_usd_m",
+      "importance": 0.004777,
+      "type": "encoder (unknown)",
+      "suggest_drop": false
+    },
+    {
+      "variable": "fx_demand_lag1m",
+      "importance": 0.003639,
+      "type": "encoder (unknown)",
+      "suggest_drop": false
+    },
+    {
+      "variable": "public_debt_growth_yoy_pct",
+      "importance": 0.002591,
+      "type": "encoder (unknown)",
+      "suggest_drop": true
+    },
+    {
+      "variable": "m2_growth_yoy_pct",
+      "importance": 0.001819,
+      "type": "encoder (unknown)",
+      "suggest_drop": true
+    },
+    {
+      "variable": "dollarization_ratio_pct",
+      "importance": 0.00163,
+      "type": "encoder (unknown)",
+      "suggest_drop": true
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+/* ===== GLOBAL ===== */
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", "Inter", Arial, sans-serif;
+  background: #f4f6fb;
+  color: #1f2937;
+}
+
+/* ===== HEADER ===== */
+
+.header_container{
+  width: 90%;
+  max-width: 1200px;
+  margin: 60px auto 30px auto;
+  text-align: left;
+}
+
+/* logo + title */
+.logo_title{
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* logo */
+.logo{
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+}
+
+/* title */
+.heading_frame{
+  font-size: 36px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+  letter-spacing: 0.4px;
+}
+
+/* subtitle */
+.subheading{
+  max-width: 720px;
+  font-size: 17px;
+  color: #6b7280;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+/* ===== MAIN CONTAINER ===== */
+
+.overall_frame {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 40px;
+
+  background: #ffffff;
+
+  border-radius: 18px;
+  border: 1px solid #e6e9ef;
+
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+}
+
+/* ===== SECONDARY SECTIONS ===== */
+
+.secondary_frame {
+
+  margin: 40px auto;
+  padding: 30px;
+
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+
+  box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.secondary_frame:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.07);
+}
+
+/* ===== HIDDEN LAYOUTS ===== */
+
+.layout {
+  display: none;
+
+  width: 90%;
+  max-width: 1200px;
+
+  margin: 40px auto;
+  padding: 30px;
+
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+
+  box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+}
+
+/* ===== CHART AREA ===== */
+
+.chart_container{
+  width: 90%;
+  max-width: 1100px;
+  margin: 40px auto;
+}
+
+/* chart card */
+.chart_box{
+
+  background: #ffffff;
+
+  border-radius: 14px;
+
+  border: 1px solid #e5e7eb;
+
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+
+  padding: 25px;
+
+  height: 420px;
+
+  margin-bottom: 40px;
+
+  transition: box-shadow 0.2s ease;
+}
+
+.chart_box:hover{
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+/* canvas */
+.chart_box canvas{
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* ===== TYPOGRAPHY ===== */
+
+h2{
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 18px;
+  color: #1f2937;
+}
+
+p{
+  line-height: 1.6;
+}
+
+/* ===== SMALL SCREEN ===== */
+
+@media (max-width: 900px){
+
+  .logo{
+    width: 70px;
+    height: 70px;
+  }
+
+  .heading_frame{
+    font-size: 28px;
+  }
+
+  .chart_box{
+    height: 360px;
+  }
+
+}

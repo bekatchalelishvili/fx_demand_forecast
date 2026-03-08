@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CHAL</title>
+
+<link rel="stylesheet" href="/static/frame.css">
+<link rel="stylesheet" href="/static/button.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="header_container">
+
+    <div class="logo_title">
+        <img src="/static/logo.png" class="logo" alt="Chal Logo">
+
+        <h1 class="heading_frame">
+            National Bank Of Georgia
+        </h1>
+    </div>
+
+    <p class="subheading">
+        FX-Demand Forecasting Tool
+    </p>
+
+</div>
+
+<!-- Menu Bar -->
+<div class="button_bar">
+    <button class="button" id="run-pipeline-btn" onclick="runPipeline()">Run TFT</button>
+    <div id="pipeline-status"></div>
+    <button class="button" onclick="goObjective()">Results</button>
+    <button class="button" onclick="goCurrent()">Methodology</button>
+    <button class="button" onclick="goAboutUs">About Us</button>
+</div>
+
+<!-- Charts -->
+<div class="chart_container">
+
+    <div class="chart_box">
+    <canvas id="forecast-chart"></canvas>
+    </div>
+
+    <div class="chart_box">
+        <canvas id="importance-chart"></canvas>
+    </div>
+
+</div>
+
+<script src="/static/main.js"></script>
+<script src="/static/chart.js"></script>
+
+</body>
+</html>
